@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
 @interface GTSSAppDelegate : NSObject <NSApplicationDelegate>
 
+@property (weak, nonatomic) IBOutlet WebView *webView;
 @property (assign) IBOutlet NSWindow *window;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

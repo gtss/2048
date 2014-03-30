@@ -16,7 +16,20 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    //make webView resize following window
+    [self.window setContentView:self.webView];
+    
+    //focus on webView
+    [self.window makeFirstResponder: self.webView];
+    
+    //local request
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"index"
+                                                         ofType:@"html"
+                                                    inDirectory:@"web"];
+    NSURL* fileURL = [NSURL fileURLWithPath:filePath];
+    NSLog(@"fileURL:%@",fileURL);
+    NSURLRequest* request = [NSURLRequest requestWithURL:fileURL];
+    [self.webView.mainFrame loadRequest:request];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.gtss._048" in the user's Application Support directory.
@@ -178,6 +191,10 @@
     }
 
     return NSTerminateNow;
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
 }
 
 @end
