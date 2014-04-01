@@ -18,12 +18,33 @@ window.fakeStorage = {
   }
 };
 
+function getParameterByName(name) {
+    var startIndex;
+    if(location.search.indexOf("?" + name + "=") == 0){
+        startIndex = 0;
+    }else{
+        startIndex = location.search.indexOf("&" + name + "=");
+    }
+    if(startIndex < 0){
+        return null;
+    }
+    var offset = name.length + 2;
+    var endIndex = location.search.indexOf("&", startIndex + offset);
+    return endIndex < 0 ? location.search.substring(startIndex + offset) : location.search.substring(startIndex + offset, endIndex);
+}
+
 function LocalStorageManager() {
   this.bestScoreKey     = "bestScore";
   this.gameStateKey     = "gameState";
 
   var supported = this.localStorageSupported();
   this.storage = supported ? window.localStorage : window.fakeStorage;
+  var bestScore = getParameterByName("bestScore");
+  var gameState = getParameterByName("gameState");
+  if(bestScore && gameState){
+    this.storage.setItem(this.bestScoreKey, bestScore);
+    this.storage.setItem(this.gameStateKey, decodeURIComponent(gameState));
+  }
 }
 
 LocalStorageManager.prototype.localStorageSupported = function () {

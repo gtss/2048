@@ -27,8 +27,24 @@
                                                          ofType:@"html"
                                                     inDirectory:@"web"];
     NSURL* fileURL = [NSURL fileURLWithPath:filePath];
-    NSLog(@"fileURL:%@",fileURL);
+
     NSURLRequest* request = [NSURLRequest requestWithURL:fileURL];
+    
+    NSDictionary *gameRecord = [NSKeyedUnarchiver unarchiveObjectWithFile: @"gameRecord.archive"];
+    if(gameRecord){
+        id bestScore = gameRecord[@"bestScore"];
+        id gameState = gameRecord[@"gameState"];
+        if(bestScore && gameState){
+            NSString *param = [NSString stringWithFormat:@"?bestScore=%@&gameState=%@",bestScore,gameState];
+            NSString *URLString = [fileURL absoluteString];
+            NSString *queryString = [param stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+            NSString *URLwithQueryString = [URLString stringByAppendingString:queryString];
+            NSLog(@"URLwithQueryString:%@",URLwithQueryString);
+            NSURL *finalURL = [NSURL URLWithString:URLwithQueryString];
+            request = [NSURLRequest requestWithURL:finalURL];
+        }
+    }
+    
     [self.webView.mainFrame loadRequest:request];
 }
 
@@ -150,6 +166,13 @@
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
     // Save changes in the application's managed object context before the application terminates.
+    WebScriptObject *win = [self.webView windowScriptObject];
+    id localStorage = [win valueForKey:@"localStorage"];
+    id bestScore = [localStorage callWebScriptMethod:@"getItem" withArguments:@[@"bestScore"]];
+    id gameState = [localStorage callWebScriptMethod:@"getItem" withArguments:@[@"gameState"]];
+    NSLog(@"bestScore:%@, gameState:%@",bestScore,gameState);
+    NSDictionary *gameRecord = @{@"bestScore":bestScore, @"gameState":gameState};
+    [NSKeyedArchiver archiveRootObject: gameRecord toFile: @"gameRecord.archive"];
     
     if (!_managedObjectContext) {
         return NSTerminateNow;
