@@ -149,7 +149,7 @@
 		F228FF9718E7DE8B000F12B6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F24042A318E5AC1100C5BEA6 /* GTSSGameState.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GTSSGameState.c; sourceTree = "<group>"; };
 		F24042A518E5B4F000C5BEA6 /* GTSSGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSSGameState.h; sourceTree = "<group>"; };
-		F24042A918E72E8300C5BEA6 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		F24042A918E72E8300C5BEA6 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		F24042AA18E72E8300C5BEA6 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		F24042AB18E72E8300C5BEA6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		F24042AD18E72E8300C5BEA6 /* animframe_polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = animframe_polyfill.js; sourceTree = "<group>"; };
@@ -162,10 +162,10 @@
 		F24042B418E72E8300C5BEA6 /* keyboard_input_manager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = keyboard_input_manager.js; sourceTree = "<group>"; };
 		F24042B518E72E8300C5BEA6 /* local_storage_manager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = local_storage_manager.js; sourceTree = "<group>"; };
 		F24042B618E72E8300C5BEA6 /* tile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tile.js; sourceTree = "<group>"; };
-		F24042B718E72E8300C5BEA6 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F24042B718E72E8300C5BEA6 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		F24042B918E72E8300C5BEA6 /* apple-touch-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon.png"; sourceTree = "<group>"; };
 		F24042BA18E72E8300C5BEA6 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
-		F24042BB18E72E8300C5BEA6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F24042BB18E72E8300C5BEA6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F24042BE18E72E8300C5BEA6 /* clear-sans.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "clear-sans.css"; sourceTree = "<group>"; };
 		F24042BF18E72E8300C5BEA6 /* ClearSans-Bold-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Bold-webfont.eot"; sourceTree = "<group>"; };
 		F24042C018E72E8300C5BEA6 /* ClearSans-Bold-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ClearSans-Bold-webfont.svg"; sourceTree = "<group>"; };
