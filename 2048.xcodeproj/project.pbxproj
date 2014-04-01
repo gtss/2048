@@ -58,6 +58,7 @@
 		F2C7499B18DE7E3300D9472A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C7497718DE7E3300D9472A /* Cocoa.framework */; };
 		F2C749A318DE7E3300D9472A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2C749A118DE7E3300D9472A /* InfoPlist.strings */; };
 		F2C749A518DE7E3300D9472A /* _048Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C749A418DE7E3300D9472A /* _048Tests.m */; };
+		F2F7A65B18EB2A4600A74527 /* 2048.iconset in Resources */ = {isa = PBXBuildFile; fileRef = F2F7A65A18EB2A4600A74527 /* 2048.iconset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,7 @@
 		F2C749A018DE7E3300D9472A /* 2048Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "2048Tests-Info.plist"; sourceTree = "<group>"; };
 		F2C749A218DE7E3300D9472A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2C749A418DE7E3300D9472A /* _048Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _048Tests.m; sourceTree = "<group>"; };
+		F2F7A65A18EB2A4600A74527 /* 2048.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = 2048.iconset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +334,7 @@
 		F2C7497D18DE7E3300D9472A /* 2048 */ = {
 			isa = PBXGroup;
 			children = (
+				F2F7A65A18EB2A4600A74527 /* 2048.iconset */,
 				F24042BB18E72E8300C5BEA6 /* README.md */,
 				F24042B718E72E8300C5BEA6 /* LICENSE.txt */,
 				F24042A918E72E8300C5BEA6 /* CONTRIBUTING.md */,
@@ -431,6 +434,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = gtss;
 				TargetAttributes = {
+					F2C7497318DE7E3300D9472A = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
 					F2C7499718DE7E3300D9472A = {
 						TestTargetID = F2C7497318DE7E3300D9472A;
 					};
@@ -463,6 +473,7 @@
 				F2C7498218DE7E3300D9472A /* InfoPlist.strings in Resources */,
 				F2C7499318DE7E3300D9472A /* Images.xcassets in Resources */,
 				F2C7498818DE7E3300D9472A /* Credits.rtf in Resources */,
+				F2F7A65B18EB2A4600A74527 /* 2048.iconset in Resources */,
 				F2C7498E18DE7E3300D9472A /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,7 +637,7 @@
 		F2C749A918DE7E3300D9472A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "2048/2048-Prefix.pch";
@@ -639,7 +650,7 @@
 		F2C749AA18DE7E3300D9472A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "2048/2048-Prefix.pch";
