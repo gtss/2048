@@ -170,6 +170,7 @@
     id localStorage = [win valueForKey:@"localStorage"];
     id bestScore = [localStorage callWebScriptMethod:@"getItem" withArguments:@[@"bestScore"]];
     id gameState = [localStorage callWebScriptMethod:@"getItem" withArguments:@[@"gameState"]];
+    gameState = gameState == nil ? @"" : gameState;
     NSLog(@"bestScore:%@, gameState:%@",bestScore,gameState);
     NSDictionary *gameRecord = @{@"bestScore":bestScore, @"gameState":gameState};
     [NSKeyedArchiver archiveRootObject: gameRecord toFile: @"gameRecord.archive"];

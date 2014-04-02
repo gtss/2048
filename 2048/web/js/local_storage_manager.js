@@ -29,8 +29,13 @@ function getParameterByName(name) {
         return null;
     }
     var offset = name.length + 2;
-    var endIndex = location.search.indexOf("&", startIndex + offset);
-    return endIndex < 0 ? location.search.substring(startIndex + offset) : location.search.substring(startIndex + offset, endIndex);
+    var startIndexWithOffset = startIndex + offset;
+    var endIndex = location.search.indexOf("&", startIndexWithOffset);
+    if(endIndex < 0 && startIndexWithOffset == location.search.length
+       || startIndexWithOffset == endIndex ){
+        return null;
+    }
+    return endIndex < 0 ? location.search.substring(startIndexWithOffset) : location.search.substring(startIndexWithOffset, endIndex);
 }
 
 function LocalStorageManager() {
@@ -41,7 +46,7 @@ function LocalStorageManager() {
   this.storage = supported ? window.localStorage : window.fakeStorage;
   var bestScore = getParameterByName("bestScore");
   var gameState = getParameterByName("gameState");
-  if(bestScore && gameState){
+  if(bestScore){
     this.storage.setItem(this.bestScoreKey, bestScore);
     this.storage.setItem(this.gameStateKey, decodeURIComponent(gameState));
   }
