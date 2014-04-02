@@ -22,9 +22,7 @@
 		F228FFA618E7E599000F12B6 /* local_storage_manager.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042B518E72E8300C5BEA6 /* local_storage_manager.js */; };
 		F228FFA718E7E599000F12B6 /* tile.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042B618E72E8300C5BEA6 /* tile.js */; };
 		F228FFA918E7E5C9000F12B6 /* apple-touch-icon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042B918E72E8300C5BEA6 /* apple-touch-icon.png */; };
-		F228FFAB18E7E5E8000F12B6 /* helpers.scss in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042C818E72E8300C5BEA6 /* helpers.scss */; };
 		F228FFAC18E7E5E8000F12B6 /* main.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042C918E72E8300C5BEA6 /* main.css */; };
-		F228FFAD18E7E5E8000F12B6 /* main.scss in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042CA18E72E8300C5BEA6 /* main.scss */; };
 		F228FFAF18E7E5FF000F12B6 /* clear-sans.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042BE18E72E8300C5BEA6 /* clear-sans.css */; };
 		F228FFB018E7E5FF000F12B6 /* ClearSans-Bold-webfont.eot in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042BF18E72E8300C5BEA6 /* ClearSans-Bold-webfont.eot */; };
 		F228FFB118E7E5FF000F12B6 /* ClearSans-Bold-webfont.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042C018E72E8300C5BEA6 /* ClearSans-Bold-webfont.svg */; };
@@ -119,9 +117,7 @@
 			dstPath = web/style;
 			dstSubfolderSpec = 7;
 			files = (
-				F228FFAB18E7E5E8000F12B6 /* helpers.scss in CopyFiles */,
 				F228FFAC18E7E5E8000F12B6 /* main.css in CopyFiles */,
-				F228FFAD18E7E5E8000F12B6 /* main.scss in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +161,6 @@
 		F24042B618E72E8300C5BEA6 /* tile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tile.js; sourceTree = "<group>"; };
 		F24042B718E72E8300C5BEA6 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		F24042B918E72E8300C5BEA6 /* apple-touch-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon.png"; sourceTree = "<group>"; };
-		F24042BA18E72E8300C5BEA6 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		F24042BB18E72E8300C5BEA6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F24042BE18E72E8300C5BEA6 /* clear-sans.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "clear-sans.css"; sourceTree = "<group>"; };
 		F24042BF18E72E8300C5BEA6 /* ClearSans-Bold-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Bold-webfont.eot"; sourceTree = "<group>"; };
@@ -177,9 +172,7 @@
 		F24042C518E72E8300C5BEA6 /* ClearSans-Regular-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Regular-webfont.eot"; sourceTree = "<group>"; };
 		F24042C618E72E8300C5BEA6 /* ClearSans-Regular-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ClearSans-Regular-webfont.svg"; sourceTree = "<group>"; };
 		F24042C718E72E8300C5BEA6 /* ClearSans-Regular-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Regular-webfont.woff"; sourceTree = "<group>"; };
-		F24042C818E72E8300C5BEA6 /* helpers.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = helpers.scss; sourceTree = "<group>"; };
 		F24042C918E72E8300C5BEA6 /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = main.css; sourceTree = "<group>"; };
-		F24042CA18E72E8300C5BEA6 /* main.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.scss; sourceTree = "<group>"; };
 		F2C7497418DE7E3300D9472A /* 2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C7497718DE7E3300D9472A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F2C7497A18DE7E3300D9472A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -232,7 +225,6 @@
 				F24042AB18E72E8300C5BEA6 /* index.html */,
 				F24042AC18E72E8300C5BEA6 /* js */,
 				F24042B818E72E8300C5BEA6 /* meta */,
-				F24042BA18E72E8300C5BEA6 /* Rakefile */,
 				F24042BC18E72E8300C5BEA6 /* style */,
 			);
 			path = web;
@@ -267,9 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				F24042BD18E72E8300C5BEA6 /* fonts */,
-				F24042C818E72E8300C5BEA6 /* helpers.scss */,
 				F24042C918E72E8300C5BEA6 /* main.css */,
-				F24042CA18E72E8300C5BEA6 /* main.scss */,
 			);
 			path = style;
 			sourceTree = "<group>";
