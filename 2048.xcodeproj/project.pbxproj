@@ -25,16 +25,6 @@
 		F228FFB118E7E5FF000F12B6 /* ClearSans-Bold-webfont.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042C018E72E8300C5BEA6 /* ClearSans-Bold-webfont.svg */; };
 		F228FFB218E7E5FF000F12B6 /* ClearSans-Bold-webfont.woff in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042C118E72E8300C5BEA6 /* ClearSans-Bold-webfont.woff */; };
 		F24042A418E5AC1100C5BEA6 /* GTSSGameState.c in Sources */ = {isa = PBXBuildFile; fileRef = F24042A318E5AC1100C5BEA6 /* GTSSGameState.c */; };
-		F24042CE18E72E8300C5BEA6 /* animframe_polyfill.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042AD18E72E8300C5BEA6 /* animframe_polyfill.js */; };
-		F24042CF18E72E8300C5BEA6 /* application.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042AE18E72E8300C5BEA6 /* application.js */; };
-		F24042D018E72E8300C5BEA6 /* bind_polyfill.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042AF18E72E8300C5BEA6 /* bind_polyfill.js */; };
-		F24042D118E72E8300C5BEA6 /* classlist_polyfill.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042B018E72E8300C5BEA6 /* classlist_polyfill.js */; };
-		F24042D218E72E8300C5BEA6 /* game_manager.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042B118E72E8300C5BEA6 /* game_manager.js */; };
-		F24042D318E72E8300C5BEA6 /* grid.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042B218E72E8300C5BEA6 /* grid.js */; };
-		F24042D418E72E8300C5BEA6 /* html_actuator.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042B318E72E8300C5BEA6 /* html_actuator.js */; };
-		F24042D518E72E8300C5BEA6 /* keyboard_input_manager.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042B418E72E8300C5BEA6 /* keyboard_input_manager.js */; };
-		F24042D618E72E8300C5BEA6 /* local_storage_manager.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042B518E72E8300C5BEA6 /* local_storage_manager.js */; };
-		F24042D718E72E8300C5BEA6 /* tile.js in Sources */ = {isa = PBXBuildFile; fileRef = F24042B618E72E8300C5BEA6 /* tile.js */; };
 		F2C7497818DE7E3300D9472A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C7497718DE7E3300D9472A /* Cocoa.framework */; };
 		F2C7498218DE7E3300D9472A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2C7498018DE7E3300D9472A /* InfoPlist.strings */; };
 		F2C7498418DE7E3300D9472A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C7498318DE7E3300D9472A /* main.m */; };
@@ -88,16 +78,6 @@
 				F228FFA618E7E599000F12B6 /* local_storage_manager.js in CopyFiles */,
 				F228FFA718E7E599000F12B6 /* tile.js in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F228FFA818E7E5B0000F12B6 /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = web/meta;
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F228FFAA18E7E5D9000F12B6 /* CopyFiles */ = {
@@ -342,7 +322,6 @@
 				F2C7497218DE7E3300D9472A /* Resources */,
 				F228FF9918E7E3CC000F12B6 /* CopyFiles */,
 				F228FF9D18E7E58C000F12B6 /* CopyFiles */,
-				F228FFA818E7E5B0000F12B6 /* Copy Files */,
 				F228FFAA18E7E5D9000F12B6 /* CopyFiles */,
 				F228FFAE18E7E5F5000F12B6 /* CopyFiles */,
 			);
@@ -442,20 +421,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24042D418E72E8300C5BEA6 /* html_actuator.js in Sources */,
 				F2C7498418DE7E3300D9472A /* main.m in Sources */,
-				F24042D718E72E8300C5BEA6 /* tile.js in Sources */,
-				F24042CF18E72E8300C5BEA6 /* application.js in Sources */,
 				F2C7499118DE7E3300D9472A /* _048.xcdatamodeld in Sources */,
-				F24042D218E72E8300C5BEA6 /* game_manager.js in Sources */,
-				F24042D318E72E8300C5BEA6 /* grid.js in Sources */,
-				F24042D518E72E8300C5BEA6 /* keyboard_input_manager.js in Sources */,
 				F2C7498B18DE7E3300D9472A /* GTSSAppDelegate.m in Sources */,
-				F24042D618E72E8300C5BEA6 /* local_storage_manager.js in Sources */,
-				F24042D118E72E8300C5BEA6 /* classlist_polyfill.js in Sources */,
-				F24042CE18E72E8300C5BEA6 /* animframe_polyfill.js in Sources */,
 				F24042A418E5AC1100C5BEA6 /* GTSSGameState.c in Sources */,
-				F24042D018E72E8300C5BEA6 /* bind_polyfill.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
