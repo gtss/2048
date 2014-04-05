@@ -145,6 +145,7 @@
 		F2C749A018DE7E3300D9472A /* 2048Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "2048Tests-Info.plist"; sourceTree = "<group>"; };
 		F2C749A218DE7E3300D9472A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2C749A418DE7E3300D9472A /* _048Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _048Tests.m; sourceTree = "<group>"; };
+		F2E8790A18F0092E00F2EF4C /* 2048.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = 2048.entitlements; sourceTree = "<group>"; };
 		F2F7A65A18EB2A4600A74527 /* 2048.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = 2048.iconset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +260,7 @@
 		F2C7497D18DE7E3300D9472A /* 2048 */ = {
 			isa = PBXGroup;
 			children = (
+				F2E8790A18F0092E00F2EF4C /* 2048.entitlements */,
 				F2F7A65A18EB2A4600A74527 /* 2048.iconset */,
 				F24042BB18E72E8300C5BEA6 /* README.md */,
 				F24042B718E72E8300C5BEA6 /* LICENSE.txt */,
@@ -361,7 +363,7 @@
 					F2C7497318DE7E3300D9472A = {
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -551,6 +553,7 @@
 		F2C749A918DE7E3300D9472A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 2048/2048.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -565,6 +568,7 @@
 		F2C749AA18DE7E3300D9472A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 2048/2048.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
