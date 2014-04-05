@@ -125,16 +125,16 @@
 		F24042C018E72E8300C5BEA6 /* ClearSans-Bold-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ClearSans-Bold-webfont.svg"; sourceTree = "<group>"; };
 		F24042C118E72E8300C5BEA6 /* ClearSans-Bold-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Bold-webfont.woff"; sourceTree = "<group>"; };
 		F24042C918E72E8300C5BEA6 /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = main.css; sourceTree = "<group>"; };
+		F2B6626F18F0027C00E08247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F2B6627018F0030B00E08247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2C7497418DE7E3300D9472A /* 2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C7497718DE7E3300D9472A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F2C7497A18DE7E3300D9472A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F2C7497B18DE7E3300D9472A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F2C7497C18DE7E3300D9472A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F2C7497F18DE7E3300D9472A /* 2048-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "2048-Info.plist"; sourceTree = "<group>"; };
-		F2C7498118DE7E3300D9472A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2C7498318DE7E3300D9472A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2C7498518DE7E3300D9472A /* 2048-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "2048-Prefix.pch"; sourceTree = "<group>"; };
-		F2C7498718DE7E3300D9472A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		F2C7498918DE7E3300D9472A /* GTSSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSSAppDelegate.h; sourceTree = "<group>"; };
 		F2C7498A18DE7E3300D9472A /* GTSSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSSAppDelegate.m; sourceTree = "<group>"; };
 		F2C7498D18DE7E3300D9472A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -446,7 +446,7 @@
 		F2C7498018DE7E3300D9472A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F2C7498118DE7E3300D9472A /* en */,
+				F2B6627018F0030B00E08247 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -454,7 +454,7 @@
 		F2C7498618DE7E3300D9472A /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F2C7498718DE7E3300D9472A /* en */,
+				F2B6626F18F0027C00E08247 /* Base */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
