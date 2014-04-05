@@ -27,10 +27,15 @@
                                                          ofType:@"html"
                                                     inDirectory:@"web"];
     NSURL* fileURL = [NSURL fileURLWithPath:filePath];
+    
+    NSURL *saveUrl = [self applicationFilesDirectory];
+    saveUrl = [saveUrl URLByAppendingPathComponent:@"gameRecord" isDirectory:NO];
+    saveUrl = [saveUrl URLByAppendingPathExtension:@"archive"];
+    
+    NSDictionary *gameRecord = [NSKeyedUnarchiver unarchiveObjectWithFile: [saveUrl path]];
 
     NSURLRequest* request = [NSURLRequest requestWithURL:fileURL];
     
-    NSDictionary *gameRecord = [NSKeyedUnarchiver unarchiveObjectWithFile: @"gameRecord.archive"];
     if(gameRecord){
         id bestScore = gameRecord[@"bestScore"];
         id gameState = gameRecord[@"gameState"];
@@ -53,7 +58,12 @@
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"com.gtss._048"];
+    NSURL *appFilesDirectory = [appSupportURL URLByAppendingPathComponent:@"com.gtss._048"];
+    BOOL isDir;
+    if(![fileManager fileExistsAtPath:[appFilesDirectory path] isDirectory: &isDir] || !isDir){
+        [fileManager createDirectoryAtPath:[appFilesDirectory path] withIntermediateDirectories:YES attributes:nil error:NULL];
+    }
+    return appFilesDirectory;
 }
 
 // Creates if necessary and returns the managed object model for the application.
@@ -171,9 +181,14 @@
     id bestScore = [localStorage callWebScriptMethod:@"getItem" withArguments:@[@"bestScore"]];
     id gameState = [localStorage callWebScriptMethod:@"getItem" withArguments:@[@"gameState"]];
     gameState = gameState == nil ? @"" : gameState;
+    bestScore = bestScore == nil ? @0 : bestScore;
     NSLog(@"bestScore:%@, gameState:%@",bestScore,gameState);
     NSDictionary *gameRecord = @{@"bestScore":bestScore, @"gameState":gameState};
-    [NSKeyedArchiver archiveRootObject: gameRecord toFile: @"gameRecord.archive"];
+    NSURL *saveUrl = [self applicationFilesDirectory];
+    saveUrl = [saveUrl URLByAppendingPathComponent:@"gameRecord" isDirectory:NO];
+    saveUrl = [saveUrl URLByAppendingPathExtension:@"archive"];
+    NSLog(@"[saveUrl path]:%@",[saveUrl path]);
+    [NSKeyedArchiver archiveRootObject: gameRecord toFile: [saveUrl path]];
     
     if (!_managedObjectContext) {
         return NSTerminateNow;
