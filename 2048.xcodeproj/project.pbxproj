@@ -11,7 +11,6 @@
 		F228FF9C18E7E564000F12B6 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042AB18E72E8300C5BEA6 /* index.html */; };
 		F228FF9E18E7E599000F12B6 /* animframe_polyfill.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042AD18E72E8300C5BEA6 /* animframe_polyfill.js */; };
 		F228FF9F18E7E599000F12B6 /* application.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042AE18E72E8300C5BEA6 /* application.js */; };
-		F228FFA018E7E599000F12B6 /* bind_polyfill.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042AF18E72E8300C5BEA6 /* bind_polyfill.js */; };
 		F228FFA118E7E599000F12B6 /* classlist_polyfill.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042B018E72E8300C5BEA6 /* classlist_polyfill.js */; };
 		F228FFA218E7E599000F12B6 /* game_manager.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042B118E72E8300C5BEA6 /* game_manager.js */; };
 		F228FFA318E7E599000F12B6 /* grid.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = F24042B218E72E8300C5BEA6 /* grid.js */; };
@@ -69,7 +68,6 @@
 			files = (
 				F228FF9E18E7E599000F12B6 /* animframe_polyfill.js in CopyFiles */,
 				F228FF9F18E7E599000F12B6 /* application.js in CopyFiles */,
-				F228FFA018E7E599000F12B6 /* bind_polyfill.js in CopyFiles */,
 				F228FFA118E7E599000F12B6 /* classlist_polyfill.js in CopyFiles */,
 				F228FFA218E7E599000F12B6 /* game_manager.js in CopyFiles */,
 				F228FFA318E7E599000F12B6 /* grid.js in CopyFiles */,
@@ -113,7 +111,6 @@
 		F24042AB18E72E8300C5BEA6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		F24042AD18E72E8300C5BEA6 /* animframe_polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = animframe_polyfill.js; sourceTree = "<group>"; };
 		F24042AE18E72E8300C5BEA6 /* application.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
-		F24042AF18E72E8300C5BEA6 /* bind_polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bind_polyfill.js; sourceTree = "<group>"; };
 		F24042B018E72E8300C5BEA6 /* classlist_polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = classlist_polyfill.js; sourceTree = "<group>"; };
 		F24042B118E72E8300C5BEA6 /* game_manager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = game_manager.js; sourceTree = "<group>"; };
 		F24042B218E72E8300C5BEA6 /* grid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = grid.js; sourceTree = "<group>"; };
@@ -188,7 +185,6 @@
 			children = (
 				F24042AD18E72E8300C5BEA6 /* animframe_polyfill.js */,
 				F24042AE18E72E8300C5BEA6 /* application.js */,
-				F24042AF18E72E8300C5BEA6 /* bind_polyfill.js */,
 				F24042B018E72E8300C5BEA6 /* classlist_polyfill.js */,
 				F24042B118E72E8300C5BEA6 /* game_manager.js */,
 				F24042B218E72E8300C5BEA6 /* grid.js */,
@@ -560,6 +556,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "2048/2048-Prefix.pch";
 				INFOPLIST_FILE = "2048/2048-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -573,6 +570,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "2048/2048-Prefix.pch";
 				INFOPLIST_FILE = "2048/2048-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
