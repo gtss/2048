@@ -1,23 +1,3 @@
-window.fakeStorage = {
-  _data: {},
-
-  setItem: function (id, val) {
-    return this._data[id] = String(val);
-  },
-
-  getItem: function (id) {
-    return this._data.hasOwnProperty(id) ? this._data[id] : undefined;
-  },
-
-  removeItem: function (id) {
-    return delete this._data[id];
-  },
-
-  clear: function () {
-    return this._data = {};
-  }
-};
-
 function getParameterByName(name) {
     var startIndex;
     if(location.search.indexOf("?" + name + "=") == 0){
@@ -39,11 +19,9 @@ function getParameterByName(name) {
 }
 
 function LocalStorageManager() {
-  this.bestScoreKey     = "bestScore";
-  this.gameStateKey     = "gameState";
-
-  var supported = this.localStorageSupported();
-  this.storage = supported ? window.localStorage : window.fakeStorage;
+  this.bestScoreKey = "bestScore";
+  this.gameStateKey = "gameState";
+  this.storage = window.localStorage;
   var bestScore = getParameterByName("bestScore");
   var gameState = getParameterByName("gameState");
   if(bestScore){
@@ -51,19 +29,6 @@ function LocalStorageManager() {
     this.storage.setItem(this.gameStateKey, decodeURIComponent(gameState));
   }
 }
-
-LocalStorageManager.prototype.localStorageSupported = function () {
-  var testKey = "test";
-  var storage = window.localStorage;
-
-  try {
-    storage.setItem(testKey, "1");
-    storage.removeItem(testKey);
-    return true;
-  } catch (error) {
-    return false;
-  }
-};
 
 // Best score getters/setters
 LocalStorageManager.prototype.getBestScore = function () {
